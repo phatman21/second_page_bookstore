@@ -1,0 +1,13 @@
+doctype html
+html lang="en"
+  head
+    title Second Page Bookstore
+    == stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    == javascript_include_tag 'application', 'data-turbolinks-track' => true 
+    meta charset="UTF-8"
+body
+  div class="container"
+    header
+      h3 class="company-name" Second Hand Bookstore
+
+    == yield 
