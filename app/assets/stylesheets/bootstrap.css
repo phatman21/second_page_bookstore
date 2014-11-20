@@ -6333,4 +6333,24 @@ button.close {
     display: none !important;
   }
 }
+
+.product_display{
+  float: right;
+  width: 940px;
+}
+
+.product{
+  margin: 10px 50px;
+  float: left;
+  height: 80px auto;
+  width: 180px;
+}
+
+.float{
+  float: left;
+}
+
+.title{
+  width: 120px;
+}
 /*# sourceMappingURL=bootstrap.css.map */

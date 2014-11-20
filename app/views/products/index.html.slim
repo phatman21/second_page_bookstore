@@ -4,7 +4,7 @@ div class="jumbotron"
   h1 Hello Readers!!
   p Welcome to the Second Page Bookstore Website!
 
-div class="col-sm-2"
+div class="col-sm-2 float"
   div class="list-group"
     h1 class="label label-default" Categories
     a href="#" class="list-group-item" Horror
@@ -12,6 +12,7 @@ div class="col-sm-2"
     a href="#" class="list-group-item" Category
     a href="#" class="list-group-item" Comedy
 
-div class="row"
-  == render partial: 'product', object: @product
+div class="col-xs-3 product_display"
+  - @product.each do |product|
+    == render partial: 'product', object: product
   

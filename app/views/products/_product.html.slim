@@ -1,6 +1,14 @@
-div class="well"
+div class="well product"
   - if product.image_filename.present?
     p == product.image_filename
 
   div class="col-md-9"
-    p == product.name
+    p class="title"
+      | Title: 
+      == product.name
+    p class="title"
+      | Category:  
+      /== product.category.name
+    p class="title"
+      |Price:
+      == number_to_currency(product.price)

@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @product = Product.first
+    @product = Product.take(6)
+    @category = Category.all
   end
 end
