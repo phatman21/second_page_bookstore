@@ -1422,7 +1422,7 @@ pre code {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
-  padding-left: 15px;
+  /*padding-left: 15px;*/
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -3645,11 +3645,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li {
   position: relative;
   display: block;
+  margin-right: 30px;
 }
 .nav > li > a {
   position: relative;
   display: block;
   padding: 10px 15px;
+  text-decoration: none;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4890,6 +4892,7 @@ a.thumbnail.active {
 .list-group {
   padding-left: 0;
   margin-bottom: 20px;
+  width: 180px;
 }
 .list-group-item {
   position: relative;
@@ -5286,6 +5289,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default {
   border-color: #ddd;
+  width:210px;
 }
 .panel-default > .panel-heading {
   color: #333;
