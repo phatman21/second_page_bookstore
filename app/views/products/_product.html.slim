@@ -6,9 +6,11 @@ div class="well product"
     p class="title"
       | Title: 
       == product.name
-    p class="title"
-      | Category:  
-      /== product.category.name
+    - if product.category.present?
+      p class="title"
+        | Category:  
+        == product.category.name
+
     p class="title"
       |Price:
       == number_to_currency(product.price)
