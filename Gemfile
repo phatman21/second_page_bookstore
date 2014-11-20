@@ -42,3 +42,5 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 
 gem 'slim-rails'
+
+gem 'mercury-rails', git:'https://github.com/jejacks0n/mercury.git'

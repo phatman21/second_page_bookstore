@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Mercury::Engine => '/'
   get 'products/index'
 
   get 'home/index'
@@ -7,6 +8,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   root 'products#index'
+
+  get 'about' => 'about#about'
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
