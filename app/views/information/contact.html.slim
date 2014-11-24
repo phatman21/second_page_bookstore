@@ -1,0 +1,19 @@
+h1 Contact Us
+
+div class="col-md-3"
+  - @contact.each do |contact|
+    div class="well"
+      p
+      |Name: 
+      == contact.name
+      p
+      |Address: 
+      == contact.address
+      -if contact.phone.present?
+        p
+        |Phone Number: 
+        == contact.phone
+      -if contact.email.present?
+        p
+        |Email Address: 
+        == contact.email

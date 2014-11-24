@@ -7,10 +7,8 @@ div class="jumbotron"
 div class="col-sm-2 float"
   div class="list-group"
     h1 class="label label-default" Categories
-    a href="#" class="list-group-item" Horror
-    a href="#" class="list-group-item" Action
-    a href="#" class="list-group-item" Category
-    a href="#" class="list-group-item" Comedy
+    -@category.each do |category|
+      a href="#" class="list-group-item" ==category.name
 
 div class="col-xs-3 product_display"
   - @product.each do |product|

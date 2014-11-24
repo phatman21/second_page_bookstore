@@ -1,4 +1,5 @@
-ActiveAdmin.register Category do
+ActiveAdmin.register Contact do
+
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -13,6 +14,6 @@ ActiveAdmin.register Category do
   #   permitted
   # end
 
-  permit_params :name 
+  permit_params :name, :address, :phone, :email
 
 end

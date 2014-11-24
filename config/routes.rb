@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   root 'products#index'
+
+  get 'about' => 'information#about', as: 'about'
+  get 'contact' => 'information#contact', as: 'contact'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
