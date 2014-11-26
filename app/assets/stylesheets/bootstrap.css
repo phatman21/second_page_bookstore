@@ -6353,4 +6353,21 @@ button.close {
 .title{
   width: 120px;
 }
+
+.singleproduct{
+  margin: 10px auto;
+  float: left;
+  height:150px auto;
+  width: 250px;
+}
+
+.title a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.title a:hover{
+  text-decoration: underline;
+}
 /*# sourceMappingURL=bootstrap.css.map */

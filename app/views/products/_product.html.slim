@@ -3,9 +3,10 @@ div class="well product"
     p == product.image_filename
 
   div class="col-md-9"
-    p class="title"
+    p class="title" 
       | Title: 
-      == product.name
+      == link_to product.name, singleproduct_path(product)
+
     - if product.category.present?
       p class="title"
         | Category:  
