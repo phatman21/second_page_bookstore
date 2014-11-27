@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'about' => 'information#about', as: 'about'
   get 'contact' => 'information#contact', as: 'contact'
   get '/products/:id' => 'products#show', as: 'singleproduct'
+  get 'search_results' => 'products#search_results', as: 'search_results'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

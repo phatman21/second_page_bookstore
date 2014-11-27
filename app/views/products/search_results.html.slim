@@ -1,0 +1,10 @@
+h2 Search Results
+
+div class="col-xs-3 product_display"
+  - if @product.size.zero?
+    p No Products Found
+  - else
+    ==pluralize(@product.size, 'Product')
+    |  Found
+    - @product.each do |product|
+      == render partial: 'product', object: product

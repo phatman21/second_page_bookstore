@@ -6370,4 +6370,14 @@ button.close {
 .title a:hover{
   text-decoration: underline;
 }
+
+.search{
+  width: auto;
+  float: right;
+}
+
+.search form{
+  display: inline;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
