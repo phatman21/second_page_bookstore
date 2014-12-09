@@ -1,0 +1,5 @@
+== render partial: 'categoriesmenu', object: @category
+
+div class="col-xs-4"
+  -@product.each do |product|
+    ==render partial: 'singleproduct', object: product

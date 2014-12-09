@@ -9,6 +9,10 @@ class ProductsController < ApplicationController
     @category = Category.all
   end
 
+  def show_category
+    @product = Product.find(params[:category.name])
+  end
+
   def search_results
     #we will do a search here
     wildcard_keywords = '%' + params[:search_keywords] + '%'
