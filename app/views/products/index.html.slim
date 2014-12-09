@@ -4,11 +4,13 @@ div class="jumbotron"
   h1 Hello Readers!!
   p Welcome to the Second Page Bookstore Website!
 
-div class="col-sm-2 float"
-  div class="list-group"
-    h1 class="label label-default" Categories
-    -@category.each do |category|
-      a href="#" class="list-group-item" ==category.name
+/ div class="col-sm-2 float"
+/   div class="list-group"
+/     h1 class="label label-default" Categories
+/     -@category.each do |category|
+/       a href="#" class="list-group-item" ==category.name
+
+== render partial: 'categoriesmenu', object: @category
 
 div class="col-xs-3 product_display"
   - @product.each do |product|

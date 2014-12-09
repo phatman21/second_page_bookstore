@@ -1,0 +1,5 @@
+div class="col-sm-2 float"
+  div class="list-group"
+    h1 class="label label-default" Categories
+    -@category.each do |category|
+      a href="#" class="list-group-item" ==category.name

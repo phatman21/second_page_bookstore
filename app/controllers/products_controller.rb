@@ -6,12 +6,14 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @category = Category.all
   end
 
   def search_results
     #we will do a search here
     wildcard_keywords = '%' + params[:search_keywords] + '%'
     @product = Product.where("name LIKE ?" , wildcard_keywords)
+    @category = Category.all
   end
   #view app/views/search_results.html.slim
 end
