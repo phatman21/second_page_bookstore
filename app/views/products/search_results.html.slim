@@ -5,7 +5,7 @@ h2 Search Results
 
 div class="col-xs-3 product_display"
   - if @product.size.zero?
-    p No Products Found
+    p No Products Found for #{params[:search_keywords]}
   - else
     ==pluralize(@product.size, 'Product')
     |  Found

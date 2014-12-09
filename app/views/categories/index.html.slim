@@ -1,4 +1,7 @@
 == render partial: "products/categoriesmenu", object: @category
 
--@products.each do |product|
-  == render partial: "products/product", object: product
+-if @products.length > 0
+  -@products.each do |product|
+    == render partial: "products/product", object: product
+-else
+  h2 There are No Products under this category
