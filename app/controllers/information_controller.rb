@@ -1,5 +1,4 @@
 class InformationController < ApplicationController
-
   def about
     @about = About.first
   end
