@@ -11,3 +11,5 @@ div class="col-xs-3 product_display"
     |  Found
     - @product.each do |product|
       == render partial: 'product', object: product
+
+== paginate @product
