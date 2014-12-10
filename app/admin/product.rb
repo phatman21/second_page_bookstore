@@ -31,7 +31,7 @@ ActiveAdmin.register Product do
     actions
   end
 
-  form(html: { multipart: true }) do |f|
+  form html: { multipart: true } do |f|
     f.inputs 'Product Details' do
       f.input :name
       f.input :price

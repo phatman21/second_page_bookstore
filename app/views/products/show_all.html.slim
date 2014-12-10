@@ -1,0 +1,9 @@
+h1 All Products
+
+== render partial: 'categoriesmenu', object: @category
+
+section class="col-xs-3 product_display"
+  - @product.each do |product|
+    == render partial: 'product', object: product
+
+== paginate @product

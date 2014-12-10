@@ -6342,8 +6342,12 @@ button.close {
 .product{
   margin: 10px 50px;
   float: left;
-  height: 80px auto;
-  width: 180px;
+  height: 300px;
+  width: 200px;
+}
+
+.product img{
+  margin: 5px;
 }
 
 .float{
@@ -6358,7 +6362,11 @@ button.close {
   margin: 10px auto;
   float: left;
   height:150px auto;
-  width: 250px;
+  width: 250px auto;
+}
+
+.singleproduct img{
+  margin: 5px;
 }
 
 .title a{
@@ -6395,4 +6403,15 @@ button.close {
   height: 36px;
 }
 
+footer{
+  margin: 10px 500px;
+  clear: both;
+  float: right;
+  bottom: 0px;
+}
+
+footer p{
+  font-size: 10px;
+  color: #444;
+}
 /*# sourceMappingURL=bootstrap.css.map */

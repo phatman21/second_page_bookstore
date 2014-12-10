@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def show_all
-    @product = Product.all
+    @product = Product.all.page(params[:page]).per(6)
     @category = Category.all
   end
 
@@ -47,6 +47,6 @@ class ProductsController < ApplicationController
 
   def find_products(wildcard_keywords)
     @product = Product.where('name LIKE ?', wildcard_keywords)
-                .page(params[:page]).per(6)
+               .page(params[:page]).per(6)
   end
 end

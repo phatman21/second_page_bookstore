@@ -1,14 +1,18 @@
 doctype html
 html lang="en"
   head
+    meta charset="UTF-8"
     title Second Page Bookstore
     == stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     == javascript_include_tag 'application', 'data-turbolinks-track' => true 
-    meta charset="UTF-8"
-body
-  div class="container"
-    header
-      h1 class="company-name" Second Hand Bookstore
-    == render "shared/navigation"
-    
-    == yield 
+  body
+    div class="container"
+      header
+        h1 class="company-name" Second Hand Bookstore
+      == render "shared/navigation"
+      
+      == yield 
+
+
+      footer
+        p class="copywrong" Blaine Davidson 

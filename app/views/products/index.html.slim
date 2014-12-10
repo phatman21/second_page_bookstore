@@ -1,6 +1,6 @@
 /== render 'layouts/navigation'
 
-div class="jumbotron"
+section class="jumbotron"
   h1 Hello Readers!!
   p Welcome to the Second Page Bookstore Website!
 
@@ -12,7 +12,7 @@ div class="jumbotron"
 
 == render partial: 'categoriesmenu', object: @category
 
-div class="col-xs-3 product_display"
+section class="col-xs-3 product_display"
   - @product.each do |product|
     == render partial: 'product', object: product
 
