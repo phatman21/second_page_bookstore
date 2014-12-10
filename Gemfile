@@ -46,3 +46,5 @@ gem 'slim-rails'
 gem 'kaminari'
 
 gem 'carrierwave'
+
+gem 'mini_magick'

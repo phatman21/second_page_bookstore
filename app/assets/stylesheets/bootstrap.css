@@ -903,7 +903,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
+  color: #000;
   background-color: #fff;
 }
 input,
@@ -4259,7 +4259,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: #0A2E13;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
@@ -6377,6 +6377,11 @@ button.close {
 }
 
 .search form{
+  margin: 10px 0px;
+  display: inline;
+}
+
+.search form input[type="submit"]{
   display: inline;
 }
 
