@@ -11,7 +11,7 @@ nav class="navbar navbar-inverse"
         li
           == link_to 'Contact', contact_path
 
-          = form_tag search_results_path, method: :get, class: 'navbar-form' do
-            = text_field_tag :search_keywords
-            = select_tag 'category', options_from_collection_for_select(@category, 'id', 'name'), prompt: 'All Categories'
-            = submit_tag 'Search', class: 'submit'
+      = form_tag search_results_path, method: :get, class: 'navbar-form' do
+        = text_field_tag :search_keywords
+        = select_tag 'category', options_from_collection_for_select(@category, 'id', 'name'), prompt: 'All Categories'
+        = submit_tag 'Search', class: 'submit'

@@ -6381,8 +6381,18 @@ button.close {
   display: inline;
 }
 
-.search form input[type="submit"]{
+.submit{
   display: inline;
+  margin: 0px 10px;
+}
+
+#search_keywords{
+  width:200px;
+  margin: 0px 10px;
+}
+
+#category{
+  height: 36px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
