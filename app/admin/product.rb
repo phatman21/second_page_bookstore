@@ -13,7 +13,34 @@ ActiveAdmin.register Product do
   #   permitted
   # end
 
-  permit_params :name, :description, :price, :stock_quantity, :image_filename,
-                :category_id
+    permit_params :name, :description, :price, :stock_quantity, :image,
+                  :category_id
 
+     index title: 'Products' do
+      selectable_column
+      column :name
+
+    column :price do |product|
+      number_to_currency product.price
+    end
+
+    column :stock_quantity
+    column :description
+    column :category
+    column :image
+    
+    actions
+  end
+
+  form(html: { multipart: true }) do |f|
+  f.inputs 'Product Details' do
+    f.input :name
+    f.input :price
+    f.input :stock_quantity
+    f.input :description
+    f.input :category
+    f.file_field :image
+    end
+    f.actions
+  end
 end
