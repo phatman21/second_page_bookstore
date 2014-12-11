@@ -1,0 +1,22 @@
+h2 Your Cart
+
+== render partial: "products/categoriesmenu", object: @category
+- if session[:cart]
+  - session[:cart].each do |id|
+    div class="well product"
+      - if Product.find(id).image.present?
+        == image_tag Product.find(id).image.url(:thumb)
+
+      div class="col-md-9"
+        p class="title" 
+          | Title: 
+          == Product.find(id).name
+
+        - if Product.find(id).category.present?
+          p class="title"
+            | Category:  
+            == Product.find(id).category.name
+
+        p class="title"
+          |Price:
+          == number_to_currency(Product.find(id).price)

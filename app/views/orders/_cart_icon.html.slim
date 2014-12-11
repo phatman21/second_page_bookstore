@@ -1,0 +1,3 @@
+- if session[:cart]
+  == link_to view_cart_path
+    p Cart: #{session[:cart].count} items
