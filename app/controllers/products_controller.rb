@@ -7,17 +7,11 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @category = Category.all
-
-    flash.now[:notice] = 'No Products were found' if @products.blank?
-    any_products(@products)
   end
 
   def show_all
     @product = Product.all.page(params[:page]).per(6)
     @category = Category.all
-
-    flash.now[:notice] = 'No Products were found' if @products.blank?
-    any_products(@products)
   end
 
   def search_results
@@ -28,8 +22,8 @@ class ProductsController < ApplicationController
       @product = check_search(wildcard_keywords)
     end
 
-    flash.now[:notice] = 'No Products were found' if @products.blank?
-    any_products(@products)
+    flash.now[:notice] = 'No Products were found for: ' + params[:search_keywords] + '.' if @product.blank?
+    any_products?(@products)
   end
 
   def keyword_present
@@ -59,8 +53,8 @@ class ProductsController < ApplicationController
                .page(params[:page]).per(6)
   end
 
-  def any_products(products)
-    @products = Product.order(:id)
+  def any_products?(products)
+    @product = Product.order(:id)
                 .page(params[:params]).per(6) if products.blank? 
   end
 end
