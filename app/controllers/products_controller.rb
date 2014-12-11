@@ -7,11 +7,17 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @category = Category.all
+
+    flash.now[:notice] = 'No Products were found' if @products.blank?
+    any_products(@products)
   end
 
   def show_all
     @product = Product.all.page(params[:page]).per(6)
     @category = Category.all
+
+    flash.now[:notice] = 'No Products were found' if @products.blank?
+    any_products(@products)
   end
 
   def search_results
@@ -21,6 +27,9 @@ class ProductsController < ApplicationController
       wildcard_keywords = '%' + params[:search_keywords] + '%'
       @product = check_search(wildcard_keywords)
     end
+
+    flash.now[:notice] = 'No Products were found' if @products.blank?
+    any_products(@products)
   end
 
   def keyword_present
@@ -48,5 +57,10 @@ class ProductsController < ApplicationController
   def find_products(wildcard_keywords)
     @product = Product.where('name LIKE ?', wildcard_keywords)
                .page(params[:page]).per(6)
+  end
+
+  def any_products(products)
+    @products = Product.order(:id)
+                .page(params[:params]).per(6) if products.blank? 
   end
 end
