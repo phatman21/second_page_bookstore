@@ -15,14 +15,13 @@ class ProductsController < ApplicationController
   end
 
   def search_results
-    # we will do a search here
     @category = Category.all
     if keyword_present
       wildcard_keywords = '%' + params[:search_keywords] + '%'
       @product = check_search(wildcard_keywords)
     end
-
-    flash.now[:notice] = 'No Products were found for: ' + params[:search_keywords] + '.' if @product.blank?
+    flash.now[:notice] = 'No Products were found for: ' +
+      params[:search_keywords] + '.' if @product.blank?
     any_products?(@products)
   end
 
@@ -55,6 +54,6 @@ class ProductsController < ApplicationController
 
   def any_products?(products)
     @product = Product.order(:id)
-                .page(params[:params]).per(6) if products.blank? 
+               .page(params[:params]).per(6) if products.blank?
   end
 end

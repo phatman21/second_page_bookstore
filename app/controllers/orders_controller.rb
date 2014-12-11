@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-
   def add_to_cart
     (session[:cart] ||= []) << params[:id]
     redirect_to :back
@@ -9,14 +8,14 @@ class OrdersController < ApplicationController
     (session[:cart] ||= []).delete_at(session[:cart].index(params[:id]) ||
     session[:cart].length)
 
-    is_cart_empty
+    cart_empty?
   end
 
   def view_cart
     @category = Category.all
   end
 
-  def is_cart_empty
+  def cart_empty?
     if session[:cart].empty?
       session.delete(:cart)
       redirect_to :root
@@ -24,5 +23,4 @@ class OrdersController < ApplicationController
       redirect_to :back
     end
   end
-
 end
