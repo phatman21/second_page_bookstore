@@ -20,3 +20,5 @@ h2 Your Cart
         p class="title"
           |Price:
           == number_to_currency(Product.find(id).price)
+
+        == link_to 'Remove', remove_from_cart_path(Product.find(id)), method: :post, class: "remove"
